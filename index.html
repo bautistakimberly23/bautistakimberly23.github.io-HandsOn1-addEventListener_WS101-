@@ -1,0 +1,76 @@
+
+<!--Exercise ADDEVENTLISTENER-->
+
+<!DOCTYPE html>
+<html>
+    <style>
+        *{
+            background: linear-gradient(blue,);
+            background-position: center;
+            background-repeat: no-repeat, repeat;
+            padding: 0px;
+        }
+        h1{
+            margin: 0;
+            padding: 0;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 2rem;
+            text-align: center;
+            color: (blue);
+            
+        }
+        h2{
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 24px;
+            text-align: center;
+            color: (blue);
+        }
+        .btn {
+            padding: 30px 50px;
+            margin-bottom: 2px;
+            border-style: inset;
+            background: linear-gradient(blue);
+            cursor: pointer;
+        }
+        .btn {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 24px;
+            text-align: center;
+            color: black;
+        }
+        table{
+            margin: 0;
+            padding: 0;
+            border-radius: 1px soild blue;
+        }
+        tr, td{
+            margin: 0;
+            padding: 0;
+            text-align: right;
+            padding: 8px;
+        }
+    </style>
+
+
+<body>
+    <h1>JavaScript addEventListener() Hands-On</h1>
+    <h2>Click at a time</h2>
+
+    <table>
+        <tr>
+    <td><button class="btn" id="button">Button 1</button></td>
+    <td><button class="btn" id="button">Button 2</button></td>
+    <td><button class="btn" id="button">Button 3</button></td>
+        </tr>
+    </table>
+    <script>
+        let buttons = document.querySelectorAll(".btn");
+        for(let i = 0; i < buttons.length; i++) {
+            buttons[i].addEventListener("click", function(){
+                alert(this.innerText + " clicked");
+            });
+
+        }
+    </script>
+</body>
+</html> 
